@@ -31,7 +31,16 @@ func getcve(url string) {
 	data := result["data"].([]interface{})
 
 	for _, value := range data {
-		fmt.Println(value.(map[string]interface{})["cve"])
+		cveDetail := value.(map[string]interface{})["cve"]
+		description := value.(map[string]interface{})["description"]
+		assigner := value.(map[string]interface{})["assigner"]
+		severity := value.(map[string]interface{})["severity"]
+
+		fmt.Print("<*>-----------------------------------------<*>\n")
+		fmt.Printf("CVE No: %v\n",cveDetail)
+		fmt.Printf("Description: %v\n",description)
+		fmt.Printf("Severity: %v\n",severity)
+		fmt.Printf("Assigner: %v\n\n",assigner)
 	}
 }
 
