@@ -20,7 +20,7 @@ Usage: gofetch day|week
 
 ## Get top 10 CVEs trending in the last 24 hours:
 
-```zsh
+```
 ❯ gofetch day
 CVE-2022-2143
 CVE-2022-32788
@@ -36,7 +36,7 @@ CVE-2022-34575
 
 ## Get top 10 CVEs trending in the last week:
 
-```zsh
+```
 ❯ gofetch week
 CVE-2022-26138
 CVE-2022-34918
@@ -49,3 +49,19 @@ CVE-2022-34169
 CVE-2022-20861
 CVE-2022-22280
 ```
+
+## Get CVE info
+
+```
+❯ gofetch day -info
+CVE-2022-27924
+ Description:  Zimbra Collaboration (aka ZCS) 8.8.15 and 9.0 allows an unauthenticated attacker to inject arbitrary memcache commands into a targeted instance. These memcache commands becomes unescaped, causing an overwrite of arbitrary cached entries.
+ Severity : HIGH
+-----------------------------------
+CVE-2022-29582
+ Description:  In the Linux kernel before 5.17.3, fs/io_uring.c has a use-after-free due to a race condition in io_uring timeouts. This can be triggered by a local user who has no access to any user namespace; however, the race condition perhaps can only be exploited infrequently.
+ Severity : HIGH
+ -----------------------------------
+ 
+ [...]
+ ```
