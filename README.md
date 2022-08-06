@@ -1,6 +1,10 @@
 # gofetch
 This could have been a bash one-liner but guess what. It's a small Go tool that lists the trending CVEs from cvetrends.com
 
+By default, it will output just the CVE IDs so it's easier to pipe into your workflows.
+
+Optionally, you can use the `-info` flag to print the CVE descriptions and severities (if assigned).
+
 # Install
 
 ```bash
